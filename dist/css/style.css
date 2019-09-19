@@ -1,9 +1,156 @@
+:root {
+  --primary-cyan: hsl(179, 62%, 43%);
+  --primary-yellow: hsl(71, 73%, 54%);
+  --primary-green: hsl(180, 47%, 52%);
+  --neutral-gray: hsl(204, 43%, 93%);
+  --neutral-blue: hsl(218, 22%, 67%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+p {
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+li > a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--neutral-gray);
+  cursor: pointer;
+}
+
 body {
   font-family: 'Karla', sans-serif;
+}
+
+.main {
+  background-color: var(--neutral-gray);
+}
+
+.container {
+  box-shadow: -2px 10px 30px 0px rgba(0, 0, 0, 0.39);
+  border-radius: 5px;
+}
+
+/* First row */
+
+.container .first {
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+}
+
+.container .first h2 {
+  color: var(--primary-cyan);
+}
+
+.container .first h3 {
+  color: var(--primary-yellow);
+}
+
+.container .first p {
+  color: var(--neutral-blue);
+}
+
+/* second row */
+.container .second {
+  background-color: var(--primary-cyan);
+  color: #fff;
+}
+
+.container .second .price {
+  color: var(--neutral-gray);
+}
+
+.container .second .price span {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Third row */
+.container .third {
+  background-color: var(--primary-green);
+  border-radius: 0 0 5px 5px;
+  color: #fff;
+}
+
+.third ul > li {
+  margin-bottom: 0.2rem;
+}
+
+/* utility class */
+.sign-up-btn {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #fff;
+  height: 25%;
+  background-color: var(--primary-yellow);
+  text-align: center;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: -2px 10px 30px -16px rgba(0, 0, 0, 0.39);
+}
+
+.sign-up-btn:hover {
+  background: #fff;
+  color: var(--primary-green);
+  letter-spacing: 1px;
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+/* Media Queries */
+
+@media (min-width: 320px) {
+  .container .first,
+  .container .second,
+  .container .third {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 375px) {
+  .container .first,
+  .container .second,
+  .container .third {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .container .first,
+  .container .second,
+  .container .third {
+    padding: 1.5rem;
+  }
+
+  .container .second {
+    border-radius: 0 0 0 5px;
+  }
+
+  .container .third {
+    border-radius: 0 0 5px 0;
+    color: #fff;
+  }
+}
+
+@media (min-width: 900px) {
+  .container .first,
+  .container .second,
+  .container .third {
+    padding: 2rem;
+  }
 }
